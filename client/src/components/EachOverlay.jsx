@@ -25,6 +25,8 @@ const EachOverlay = ({ ols, ind }) => {
 		updateOverlay(payload);
 	};
 
+	console.log(overlays);
+
 	return (
 		<div key={ind} className=" flex gap-5 items-center border p-3">
 			<input
@@ -52,20 +54,22 @@ const EachOverlay = ({ ols, ind }) => {
 				type="number"
 				placeholder="Height"
 				name="height"
-				value={parseInt(state.height)}
-				disabled={!edit}
-				style={edit ? { backgroundColor: `#d5d3f0` } : {}}
-				onChange={handleChange}
+				value={parseInt(ols.height)}
+				disabled
+				// disabled={!edit}
+				// style={edit ? { backgroundColor: `#d5d3f0` } : {}}
+				// onChange={handleChange}
 			/>
 			<input
 				className=" p-2 w-20 outline-lime-500 bg-slate-100 "
 				type="number"
 				placeholder="Width"
 				name="width"
-				value={parseInt(state.width)}
-				disabled={!edit}
-				style={edit ? { backgroundColor: `#d5d3f0` } : {}}
-				onChange={handleChange}
+				value={parseInt(ols.width)}
+				disabled
+				// disabled={!edit}
+				// style={edit ? { backgroundColor: `#d5d3f0` } : {}}
+				// onChange={handleChange}
 			/>
 			<input
 				className=" p-2 w-20 outline-lime-500 bg-slate-100"
